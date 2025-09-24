@@ -1,0 +1,27 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid $ui-main-gray;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+    span {
+      font-size: 2rem;
+    }
+    .completed {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.deleteButton {
+  img {
+    height: 100%;
+  }
+}

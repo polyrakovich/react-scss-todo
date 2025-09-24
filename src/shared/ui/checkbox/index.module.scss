@@ -1,0 +1,16 @@
+.checkbox {
+  position: relative;
+  height: 50%;
+  border: 1px solid $ui-main-gray;
+  border-radius: 25%;
+  background-color: transparent;
+  aspect-ratio: 1/1;
+  transition: .25s;
+  &:checked {
+    background-color: $ui-main-gray;
+    background-image: url("public/icons/checkmark-icon.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: .25s;
+  }
+}
