@@ -1,18 +1,77 @@
-# react-scss-todo
-Based on FSD architecture
-# React + Vite
+# Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and minimalistic Todo List application built with React and Vite. It allows you to keep track of your daily tasks, persist them in the browser, and manage your productivity efficiently. The project features modular and reusable React components with SCSS styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add and delete tasks
+- Toggle completed state for each task
+- Persistent storage with `localStorage`
+- Responsive and clean UI
+- Modular components for maintainability
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19**
+- **Vite** (for dev server & build)
+- **SCSS** for styling
+- **ESLint & Prettier** for code quality
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd todo-list
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open the app:**
+   - The app will be running locally at `http://localhost:5173` (default Vite port). 
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Preview the built app:
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+  app/             Main app container and styles
+  entities/        Form and item components
+  wigets/          TodoList widget
+  shared/          Reusable UI and utility code
+  shared/utils/    Utility functions (like compareArrs)
+public/icons/      SVG icons
+```
+
+## Notes
+- All tasks are persisted in the browser via localStorage.
+- The equality check for tasks uses a custom `compareArrs` utility.
+- Styling is done with SCSS modules for encapsulation.
+
+## Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Create a new Pull Request
+
+## License
+[MIT](LICENSE) (add a license file if you want to specify one)
+
